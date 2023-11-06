@@ -9,7 +9,7 @@ class PostController extends Controller
 { 
     public function index(Post $post,Product $product)
     {
-        return view('posts.index')->with(['products' => $product->get(),'posts' => $post->getPaginateByLimit(1)]); 
+        return view('posts.index')->with(['products' => $product->get(),'reviews' => $post->getPaginateByLimit(1)]); 
     }
     public function show(Post $post)
     {
